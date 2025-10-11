@@ -21,7 +21,7 @@ class GeminiGenerator:
         print(f"Gemini model initialized: {model_name}")
 
     def build_prompt(self, query: str, retrieved_chunks: List[Dict]) -> str:
-        context = "\n\n".join([chunk["text"] for chunk in retrieved_chunks])
+        context = "\n\n".join([chunk["text"] for chunk in retrieved_chunks[:5]])
         prompt = f"""
             You are a knowledgeable assistant. 
             Use only the context below to answer the question.
