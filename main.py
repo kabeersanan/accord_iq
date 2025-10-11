@@ -202,3 +202,4 @@ def debug_index_info():
 @app.get("/")
 def root():
     return {"status": "ok", "message": "RAG PDF Chat backend is running"}
+
